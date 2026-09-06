@@ -7,32 +7,17 @@ df = pd.read_csv("dataset/data.csv")
 #haed 5 firts lines
 #print(df.head())
 
-#tail 5 latest lines
-#print(df.tail())
 
-#haed with more details ex: 8 firts lines
-#print(df.head(8))
+#select email column
+#print(df["email"].head())
 
-#shape of dataset
-print(df.shape) # (1000, 10)
+#or 
+print(df.email.head())
 
-#columns
-#print(df.columns) #Index(['id', 'date', 'first_name', 'last_name', 'email', 'gender', 'ip_address', 'country', 'price_paid', 'tax'], dtype='str')
+#dataframe vs serie
+print(type(df)) #<class 'pandas.DataFrame'>
 
-#columns on liste
-print(df.columns.tolist()) #['id', 'date', 'first_name', 'last_name', 'email', 'gender', 'ip_address', 'country', 'price_paid', 'tax']
-
-
-#index
-print(df.index) #RangeIndex(start=0, stop=1000, step=1)
-
-
-#modify index, inplace = True modify the original dataframe
-df.set_index('id', inplace=True)
-#print(df)
-
-
-print(df.index) #RangeIndex(start=1, stop=1001, step=1, name='id')
+print(type(df.email)) #<class 'pandas.Series'>
 
 
 
