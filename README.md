@@ -1,3 +1,3 @@
-# git in VScod
+# datascience basics with Pandas
 
 Let's make some code!
