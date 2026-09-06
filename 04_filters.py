@@ -4,39 +4,25 @@ import pandas as pd
 #read csv file and put it in variable(df)
 df = pd.read_csv("dataset/data.csv")
 
-#haed 5 firts lines
-#print(df.head())
+#filtre gender
+#print(df["gender"])
 
+#filtre gender comparaison
+#print(df["gender"]=="Male")
 
-#select email column
-#print(df["email"].head())
+#filter the original dataframe with : df["gender"]=="Male"
+#df[df["gender"]=="Male"] # df["gender"]=="Male"
+#df[df["gender"]=="Male"] #dataframe
+#df["gender"]=="Male" #serie just the column
+print(df[df["gender"]=="Male"]) #[438 rows x 10 columns]
 
-#or 
-print(df.email.head())
+#"gender"]=="Female"
+print(df[df["gender"]=="Female"]) #[493 rows x 10 columns]
 
-#dataframe vs serie
-#dataframe 
-print(type(df)) #<class 'pandas.DataFrame'>
+#"gender"]not "Female" and not "Male"
+print(df[(df["gender"]!="Female") & (df["gender"]!="Male")] ) #[69 rows x 10 columns]
 
-#Serie
-print(type(df.email)) #<class 'pandas.Series'>
-
-#data from 10 to 20 lines
-print(df[10:20]) #line 20 is not in the list
-
-#with LOC with index numeric
-print(df.loc[10:20]) #line 20 is in the list
-
-#with LOC with index varchar
-df_email=df.set_index("email")
-#print(df_email.head(10))
-#print(df_email.loc['hharridge1@gnu.org']) #
-#print(type(df_email.loc['hharridge1@gnu.org'])) #<class 'pandas.Series'>
-
-#just values
-#print(df_email.loc['hharridge1@gnu.org'].values)  #array
-
-print(df_email.loc['hharridge1@gnu.org'].values.tolist()) #list
-
-# a lot of emailfsd
-print(df_email.loc[['hharridge1@gnu.org','kbeasant4@jigsy.com']]) #dataframe
+#Tips
+male_filter=df["gender"]=="Male"
+df_mal=df[male_filter]
+print(df_mal) #[438 rows x 10 columns]
