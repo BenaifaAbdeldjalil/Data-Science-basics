@@ -25,4 +25,30 @@ print(df[(df["gender"]!="Female") & (df["gender"]!="Male")] ) #[69 rows x 10 col
 #Tips
 male_filter=df["gender"]=="Male"
 df_mal=df[male_filter]
-print(df_mal) #[438 rows x 10 columns]
+#print(df_mal) #[438 rows x 10 columns]
+
+#country
+#df_country = df["country"].isin(["France","Canada"])
+filter_country=df["country"].isin(["France","Canada"])
+print(df[filter_country]) #[569 rows x 10 columns]
+
+#price
+#filtre_price= df["price_paid"]>5
+#print(df[filtre_price]) #TypeError: '>' not supported between instances of 'str' and 'int'
+
+#solution
+
+#copy data
+dftest=df.copy()
+#datacleaning
+dftest.price_paid=dftest.price_paid.apply(lambda x: x.replace("$",""))
+
+#dataconversion
+dftest.price_paid=dftest.price_paid.astype(float)
+
+#filter
+filtre_price= dftest["price_paid"]>5
+print(dftest[filtre_price])
+
+
+
