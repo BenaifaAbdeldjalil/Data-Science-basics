@@ -29,9 +29,14 @@ print(df.loc[10:20]) #line 20 is in the list
 
 #with LOC with index varchar
 df_email=df.set_index("email")
-print(df_email.head(10))
-print(df_email.loc['hharridge1@gnu.org']) #
-print(type(df_email.loc['hharridge1@gnu.org'])) #<class 'pandas.Series'>
+#print(df_email.head(10))
+#print(df_email.loc['hharridge1@gnu.org']) #
+#print(type(df_email.loc['hharridge1@gnu.org'])) #<class 'pandas.Series'>
 
+#just values
+#print(df_email.loc['hharridge1@gnu.org'].values)  #array
 
+print(df_email.loc['hharridge1@gnu.org'].values.tolist()) #list
 
+# a lot of email
+print(df_email.loc[['hharridge1@gnu.org','kbeasant4@jigsy.com']]) #dataframe
