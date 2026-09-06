@@ -21,9 +21,11 @@ print(df) #[562 rows x 8 columns]
 ##OR
 
 df.drop(['id', 'date', 'country','price_paid', 'tax'],axis=1, inplace=True)
-print(df.columns)
+print(df.columns) #Index(['first_name', 'last_name', 'email'], dtype='str')
 
 
+#other solution
 
-
+del df['first_name']
+print(df.columns) #Index(['last_name', 'email'], dtype='str')
 
