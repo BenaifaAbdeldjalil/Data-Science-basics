@@ -1,3 +1,3 @@
-# datascience basics with Pandas
+# Datascience basics with Pandas
 
 Let's make some code!
