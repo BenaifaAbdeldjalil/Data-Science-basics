@@ -15,3 +15,15 @@ df.set_index("gender",inplace=True)
 df.drop("Male",axis=0,inplace=True)
 print(df) #[562 rows x 8 columns]
 
+#drop lot of column
+#list= ['id', 'date', 'country','price_paid', 'tax']#
+#df.drop(list,axis=1, inplace=True)
+##OR
+
+df.drop(['id', 'date', 'country','price_paid', 'tax'],axis=1, inplace=True)
+print(df.columns)
+
+
+
+
+
