@@ -32,7 +32,7 @@ df.set_index('id', inplace=True)
 #print(df)
 
 
-print(df.index)
+print(df.index) #RangeIndex(start=1, stop=1001, step=1, name='id')
 
 
 
