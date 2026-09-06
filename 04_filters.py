@@ -48,7 +48,7 @@ dftest.price_paid=dftest.price_paid.astype(float)
 
 #filter
 filtre_price= dftest["price_paid"]>5
-print(dftest[filtre_price])
+print(dftest[filtre_price]) #[694 rows x 10 columns]
 
 
 
