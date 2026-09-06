@@ -38,5 +38,5 @@ df_email=df.set_index("email")
 
 print(df_email.loc['hharridge1@gnu.org'].values.tolist()) #list
 
-# a lot of email
+# a lot of emailfsd
 print(df_email.loc[['hharridge1@gnu.org','kbeasant4@jigsy.com']]) #dataframe
