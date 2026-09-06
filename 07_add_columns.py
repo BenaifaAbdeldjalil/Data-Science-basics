@@ -14,13 +14,19 @@ df.price_paid=df.price_paid.astype(float)
 
 #add column df["tax_price"]
 df["tax_price"]=round(df["price_paid"]*(1-df["tax"]/100),2)
+
+
+
+#mapping
+country={"United State":"USA", 
+         "Morocco" :"MAR",
+         "Canada":"CNA",
+         "France" : "FR"}
+
+df["ind"] = df["country"].map(country)
+
+
 print(df)
-
-
-
-
-
-
 
 
 
