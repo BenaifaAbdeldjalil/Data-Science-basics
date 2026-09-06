@@ -15,8 +15,10 @@ df = pd.read_csv("dataset/data.csv")
 print(df.email.head())
 
 #dataframe vs serie
+#dataframe 
 print(type(df)) #<class 'pandas.DataFrame'>
 
+#Serie
 print(type(df.email)) #<class 'pandas.Series'>
 
 
