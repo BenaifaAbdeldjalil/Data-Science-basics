@@ -62,8 +62,17 @@ print(df.groupby(["gender","country"])["price_paid"].mean()) #all group by count
 print(df.groupby(["gender", "country"])[["price_paid", "tax"]].mean())
 
 
-
-
+import matplotlib.pyplot as plt
+print("###################################")
+#graphe
+#on terminal -->pip install matplot lib
+s = df.groupby("date")["price_paid"].sum().sort_index() #all group by country
+s.plot()
+plt.xlabel("date") #  axe x
+plt.ylabel("price_paid") #  axe y
+plt.title("Somme de price_paid par date") #title
+plt.tight_layout()
+plt.show()
 
 
 
